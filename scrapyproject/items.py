@@ -15,7 +15,8 @@ class ScrapyprojectItem(scrapy.Item):
 class Film(scrapy.Item):
     film_url = scrapy.Field()
     title = scrapy.Field()
-    producer = scrapy.Field()
+    director = scrapy.Field()
     genre = scrapy.Field()
     year = scrapy.Field()
     country = scrapy.Field()
+    rating = scrapy.Field()
