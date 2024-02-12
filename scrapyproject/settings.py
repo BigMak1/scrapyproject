@@ -12,15 +12,22 @@ BOT_NAME = "scrapyproject"
 SPIDER_MODULES = ["scrapyproject.spiders"]
 NEWSPIDER_MODULE = "scrapyproject.spiders"
 
-
+LOG_LEVEL = 'INFO' 
+FEEDS = {
+    "data_films.csv":{
+        "format" : "csv",
+        "overwritwe": True
+    }   
+}
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "scrapyproject (+http://www.yourdomain.com)"
+
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-#CONCURRENT_REQUESTS = 32
+CONCURRENT_REQUESTS = 64
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
